@@ -3,8 +3,13 @@
 
 # COMMAND ----------
 
-!cp ../requirements.txt ~/.
-%pip install -r ~/requirements.txt
+# MAGIC %skip
+# MAGIC !cp ../requirements.txt ~/.
+# MAGIC try:    
+# MAGIC     %pip install -r ~/requirements.txt
+# MAGIC except subprocess.CalledProcessError as e:
+# MAGIC     print(f"Failed to install requirements: {e}")
+# MAGIC
 
 # COMMAND ----------
 
